@@ -13,6 +13,20 @@
 				<input type="submit" style="display:none;">
 			</fieldset>
 		</form>
+		
+		<form id="form">
+			<fieldset>
+				<legend>Colored Box Properties</legend>
+				<table>
+					<tr>
+						<td>Color</td>
+						<td><input id="styling_color" type="text" size="40" maxlength="40"></td>
+					</tr>
+				</table>
+				<input type="submit" style="display:none;">
+			</fieldset>
+		</form>
+
 		<style>
 		:host {
 			display: block;
@@ -34,7 +48,8 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							opacity: this.opacity
+							opacity: this.opacity,
+							color: this.color
 						}
 					}
 			}));
@@ -46,6 +61,14 @@
 
 		get opacity() {
 			return this._shadowRoot.getElementById("builder_opacity").value;
+		}
+
+		set color(newColor) {
+			this._shadowRoot.getElementById("styling_color").value = newColor;
+		}
+
+		get color() {
+			return this._shadowRoot.getElementById("styling_color").value;
 		}
 	}
 
