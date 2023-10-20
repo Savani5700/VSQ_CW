@@ -12,9 +12,7 @@
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
-		</form>
-		
-		<form id="form">
+			
 			<fieldset>
 				<legend>Colored Box Properties</legend>
 				<table>
