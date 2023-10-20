@@ -6,7 +6,7 @@
 				<legend>Colored Box Properties</legend>
 				<table>
 					<tr>
-						<td>Opacity</td>
+						<td>Set Opacity</td>
 						<td><input id="builder_opacity" type="text" size="5" maxlength="5"></td>
 					</tr>
 				</table>
